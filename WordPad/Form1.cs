@@ -29,7 +29,6 @@ namespace WordPad
             {
                 fontSelectorComboBox.Items.Add(item.Name);
             }
-            fontSelectorComboBox.Items.Add("");
             fontSelectorComboBox.SelectedItem = richBody.Font.Name;
         }
 
@@ -149,8 +148,8 @@ namespace WordPad
 
         private void fontSelectorComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            richBody.Focus();
             changeFont();
+            richBody.Focus();
         }
 
         private void fontSizeComboBox_TextChanged(object sender, EventArgs e)
@@ -263,6 +262,29 @@ namespace WordPad
             centerAlignButton.Checked = false;
             rightAlignButton.Checked = true;
             richBody.SelectionAlignment = HorizontalAlignment.Right;
+        }
+
+        private void insertImageButton_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog od = new OpenFileDialog();
+            od.Filter = "Image Files(*.JPG;*.PNG)|*.JPG;*.PNG";
+            if (od.ShowDialog() == DialogResult.OK)
+            {
+                Clipboard.Clear();
+                Image image = Image.FromFile(od.FileName);
+                Clipboard.SetImage(image);
+                richBody.Paste();
+                Clipboard.Clear();
+            }
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dr = UnsavedDocumentWarning();
+            if (dr == DialogResult.Yes)
+                Save();
+            if (dr == DialogResult.Cancel)
+                e.Cancel = true;
         }
     }
 }

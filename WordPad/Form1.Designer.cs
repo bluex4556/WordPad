@@ -74,6 +74,8 @@ namespace WordPad
             this.leftAlignButton = new System.Windows.Forms.ToolStripButton();
             this.centerAlignButton = new System.Windows.Forms.ToolStripButton();
             this.rightAlignButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.insertImageButton = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -103,7 +105,7 @@ namespace WordPad
             this.toolStripSeparator2,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // newFileToolStripMenuItem
@@ -198,7 +200,9 @@ namespace WordPad
             this.toolStripSeparator4,
             this.leftAlignButton,
             this.centerAlignButton,
-            this.rightAlignButton});
+            this.rightAlignButton,
+            this.toolStripSeparator5,
+            this.insertImageButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 28);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(800, 28);
@@ -208,23 +212,23 @@ namespace WordPad
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator.Size = new System.Drawing.Size(6, 28);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 28);
             // 
             // fontSelectorComboBox
             // 
             this.fontSelectorComboBox.Name = "fontSelectorComboBox";
-            this.fontSelectorComboBox.Size = new System.Drawing.Size(121, 31);
+            this.fontSelectorComboBox.Size = new System.Drawing.Size(121, 28);
             this.fontSelectorComboBox.SelectedIndexChanged += new System.EventHandler(this.fontSelectorComboBox_SelectedIndexChanged);
             // 
             // fontSizeComboBox
             // 
             this.fontSizeComboBox.Name = "fontSizeComboBox";
-            this.fontSizeComboBox.Size = new System.Drawing.Size(75, 31);
+            this.fontSizeComboBox.Size = new System.Drawing.Size(75, 28);
             this.fontSizeComboBox.TextChanged += new System.EventHandler(this.fontSizeComboBox_TextChanged);
             // 
             // richBody
@@ -244,7 +248,7 @@ namespace WordPad
             this.copyToolStripMenuItem,
             this.pasteToolStripMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 26);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
             this.editToolStripMenuItem.Text = "Edit";
             // 
             // cutToolStripMenuItem
@@ -271,12 +275,12 @@ namespace WordPad
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 28);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 28);
             // 
             // formatToolStripMenuItem
             // 
@@ -291,14 +295,14 @@ namespace WordPad
             // fontToolStripMenuItem
             // 
             this.fontToolStripMenuItem.Name = "fontToolStripMenuItem";
-            this.fontToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
+            this.fontToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.fontToolStripMenuItem.Text = "Font";
             this.fontToolStripMenuItem.Click += new System.EventHandler(this.fontToolStripMenuItem_Click);
             // 
             // colorToolStripMenuItem
             // 
             this.colorToolStripMenuItem.Name = "colorToolStripMenuItem";
-            this.colorToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
+            this.colorToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.colorToolStripMenuItem.Text = "Color";
             this.colorToolStripMenuItem.Click += new System.EventHandler(this.colorToolStripMenuItem_Click);
             // 
@@ -323,13 +327,13 @@ namespace WordPad
             // centerToolStripMenuItem
             // 
             this.centerToolStripMenuItem.Name = "centerToolStripMenuItem";
-            this.centerToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
+            this.centerToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.centerToolStripMenuItem.Text = "Center";
             // 
             // rightToolStripMenuItem
             // 
             this.rightToolStripMenuItem.Name = "rightToolStripMenuItem";
-            this.rightToolStripMenuItem.Size = new System.Drawing.Size(135, 26);
+            this.rightToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.rightToolStripMenuItem.Text = "Right";
             // 
             // newToolStripButton
@@ -350,7 +354,7 @@ namespace WordPad
             this.openToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripButton.Image")));
             this.openToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.openToolStripButton.Name = "openToolStripButton";
-            this.openToolStripButton.Size = new System.Drawing.Size(29, 28);
+            this.openToolStripButton.Size = new System.Drawing.Size(29, 25);
             this.openToolStripButton.Text = "&Open";
             this.openToolStripButton.ToolTipText = "Open File (Ctrl + O)";
             this.openToolStripButton.Click += new System.EventHandler(this.openFileToolStripMenuItem_Click);
@@ -361,7 +365,7 @@ namespace WordPad
             this.saveToolStripButton.Image = global::WordPad.Properties.Resources.SaveIcon;
             this.saveToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripButton.Name = "saveToolStripButton";
-            this.saveToolStripButton.Size = new System.Drawing.Size(29, 28);
+            this.saveToolStripButton.Size = new System.Drawing.Size(29, 25);
             this.saveToolStripButton.Text = "&Save";
             this.saveToolStripButton.ToolTipText = "Save File (Ctrl + S)";
             this.saveToolStripButton.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
@@ -372,7 +376,7 @@ namespace WordPad
             this.toolStripPrintButton.Image = global::WordPad.Properties.Resources.PrintIcon;
             this.toolStripPrintButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripPrintButton.Name = "toolStripPrintButton";
-            this.toolStripPrintButton.Size = new System.Drawing.Size(29, 28);
+            this.toolStripPrintButton.Size = new System.Drawing.Size(29, 25);
             this.toolStripPrintButton.Text = "toolStripButton1";
             this.toolStripPrintButton.Click += new System.EventHandler(this.toolStripPrintButton_Click);
             // 
@@ -382,7 +386,7 @@ namespace WordPad
             this.cutToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("cutToolStripButton.Image")));
             this.cutToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.cutToolStripButton.Name = "cutToolStripButton";
-            this.cutToolStripButton.Size = new System.Drawing.Size(29, 28);
+            this.cutToolStripButton.Size = new System.Drawing.Size(29, 25);
             this.cutToolStripButton.Text = "C&ut";
             this.cutToolStripButton.Click += new System.EventHandler(this.cutToolStripButton_Click);
             // 
@@ -393,7 +397,7 @@ namespace WordPad
             this.copyToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("copyToolStripButton.Image")));
             this.copyToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.copyToolStripButton.Name = "copyToolStripButton";
-            this.copyToolStripButton.Size = new System.Drawing.Size(29, 28);
+            this.copyToolStripButton.Size = new System.Drawing.Size(29, 25);
             this.copyToolStripButton.Text = "&Copy";
             this.copyToolStripButton.Click += new System.EventHandler(this.copyToolStripButton_Click);
             // 
@@ -403,7 +407,7 @@ namespace WordPad
             this.pasteToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("pasteToolStripButton.Image")));
             this.pasteToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.pasteToolStripButton.Name = "pasteToolStripButton";
-            this.pasteToolStripButton.Size = new System.Drawing.Size(29, 28);
+            this.pasteToolStripButton.Size = new System.Drawing.Size(29, 25);
             this.pasteToolStripButton.Text = "&Paste";
             this.pasteToolStripButton.Click += new System.EventHandler(this.pasteToolStripButton_Click);
             // 
@@ -413,7 +417,7 @@ namespace WordPad
             this.toolStripButton4.Image = global::WordPad.Properties.Resources.colorWheel;
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(29, 28);
+            this.toolStripButton4.Size = new System.Drawing.Size(29, 25);
             this.toolStripButton4.Text = "toolStripButton4";
             this.toolStripButton4.Click += new System.EventHandler(this.colorToolStripMenuItem_Click);
             // 
@@ -423,7 +427,7 @@ namespace WordPad
             this.boldButton.Image = global::WordPad.Properties.Resources.bold;
             this.boldButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.boldButton.Name = "boldButton";
-            this.boldButton.Size = new System.Drawing.Size(29, 28);
+            this.boldButton.Size = new System.Drawing.Size(29, 25);
             this.boldButton.Text = "toolStripButton1";
             this.boldButton.Click += new System.EventHandler(this.boldButton_Click);
             // 
@@ -433,7 +437,7 @@ namespace WordPad
             this.italicButton.Image = global::WordPad.Properties.Resources.italic;
             this.italicButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.italicButton.Name = "italicButton";
-            this.italicButton.Size = new System.Drawing.Size(29, 28);
+            this.italicButton.Size = new System.Drawing.Size(29, 25);
             this.italicButton.Text = "toolStripButton2";
             this.italicButton.Click += new System.EventHandler(this.italicButton_Click);
             // 
@@ -443,7 +447,7 @@ namespace WordPad
             this.underlineButton.Image = global::WordPad.Properties.Resources.underline;
             this.underlineButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.underlineButton.Name = "underlineButton";
-            this.underlineButton.Size = new System.Drawing.Size(29, 28);
+            this.underlineButton.Size = new System.Drawing.Size(29, 25);
             this.underlineButton.Text = "toolStripButton3";
             this.underlineButton.Click += new System.EventHandler(this.underlineButton_Click);
             // 
@@ -479,6 +483,21 @@ namespace WordPad
             this.rightAlignButton.Text = "toolStripButton3";
             this.rightAlignButton.Click += new System.EventHandler(this.rightAlignButton_Click);
             // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 28);
+            // 
+            // insertImageButton
+            // 
+            this.insertImageButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.insertImageButton.Image = ((System.Drawing.Image)(resources.GetObject("insertImageButton.Image")));
+            this.insertImageButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.insertImageButton.Name = "insertImageButton";
+            this.insertImageButton.Size = new System.Drawing.Size(29, 25);
+            this.insertImageButton.Text = "toolStripButton1";
+            this.insertImageButton.Click += new System.EventHandler(this.insertImageButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -491,6 +510,7 @@ namespace WordPad
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
@@ -546,6 +566,8 @@ namespace WordPad
         private System.Windows.Forms.ToolStripButton centerAlignButton;
         private System.Windows.Forms.ToolStripButton rightAlignButton;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripButton insertImageButton;
     }
 }
 
